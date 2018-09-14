@@ -31,11 +31,11 @@ API_KEY = 'AIzaSyD57Jqov86VvAhRWjE64YSCcILI9mueNdY'
 service = build('fusiontables', 'v1', developerKey=API_KEY)
 
 # This is the table id for the fusion table
-TABLE_ID = '1-941Px73b_XWWn3pmPHKp6WhbbSVNiEmKMadwe0'
+TABLE_ID = '1WslGJjkwKpI72lrhRzVZDHZjtU3R6fxCxayvJlAg'
 
 # This is the default columns for the query
-query_cols = ['sex']
-query_values = ['female'] #Change to be the value(s) you're querying in the column you've specified
+query_cols = ['Agreeableness']
+query_values = ['4'] #Change to be the value(s) you're querying in the column you've specified
 
 # Import the Flask Framework
 from flask import Flask, request
@@ -48,7 +48,7 @@ def get_all_data(query):
     #logging.info(response['columns'])
     #logging.info(response['rows'])
     
-    query = "SELECT * FROM " + TABLE_ID + " WHERE  sex = 'female' LIMIT 5"
+    query = "SELECT * FROM " + TABLE_ID + " WHERE  Agreeableness = '4' LIMIT 5"
     response = service.query().sql(sql=query).execute()
     logging.info(response['columns'])
     logging.info(response['rows'])
@@ -72,12 +72,12 @@ def make_query(cols, values, limit):
     string_values = string_values[2:len(string_values)]
     
     #Change this query to have your corresponding column (in our soccer example, the column for our WHERE is Scorer).
-    query = "SELECT " + string_cols + " FROM " + TABLE_ID + " WHERE sex = '" + string_values + "'"
+    query = "SELECT " + string_cols + " FROM " + TABLE_ID + " WHERE Agreeableness = '" + string_values + "'"
 
     query = query + " LIMIT " + str(limit)
 
     logging.info(query)
-    # query = "SELECT * FROM " + TABLE_ID + " WHERE  sex = 'female' LIMIT 5"
+    # query = "SELECT * FROM " + TABLE_ID + " WHERE  Agreeableness > '4' LIMIT 5"
 
     return query
     

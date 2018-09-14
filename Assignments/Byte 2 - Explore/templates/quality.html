@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
+    <meta name="description" content="Cori Faklaris">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
     <title>Quality of This Data</title>
@@ -46,27 +46,32 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Quality: About This Data Set</h1>
-        <p>Write a brief summary about the quality of the data set here</a></p>
+        <p>This data was determined through statistical analyses such as inter-factor alpha and factor correlations to be a reliable and valid measure of the psychological concepts being studied. </a></p>
       </div>
 
     
       <div class="page-header">
 	<h2>Is the data complete?</h2>
-	<p>If not, what is missing and what concerns does it raise?
-	What is your evidence for this?</p>
+	<p>Not all participants filled in values for each column. For instance, only n=264 participants answered the questions in the first three pages of the study, because they were added midway through data collection. This is expected. Of more concern are the individuals who left Q14 blank or answered in nonsensical ways i.e. GOOD - the question asked what other factors other than those mentioned in the survey affect their openness to using security measures, with the directive to write "None" if none came to mind.</p>
       </div>
       
       <div class="page-header">
 	<h2>Is the data coherent?</h2>
-	<p>Does it make sense relative to itself? Does it match your
-	expectations? Are the distributions sensible? What is your
-	evidence for this?</p>
+	<p>The data make sense relative to itself. I have performed a number of complicated and simple tests. For instance, I have examined the distributions of values by visually inspecting histograms with the normal curve plotted. I have visually inspected scatterplots to see if expected correlations were discernable; they were. </p>
+      
+      <h3>The time it took people to complete the long survey is as expected:</h3>
+
+	<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=LINE_AGGREGATE&amp;isXyPlot=true&amp;bsize=0.0&amp;q=select+col0%2C+col432+from+1WslGJjkwKpI72lrhRzVZDHZjtU3R6fxCxayvJlAg&amp;qrs=+where+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=+order+by+col0+asc&amp;uiversion=2&amp;rstart=0.0013153937947&amp;rend=0.05143486241123421&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe>
+      <h3>Scatterplot of SecSenALL by SeBIS:</h3>
+      <iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col357%2C+col364+from+1WslGJjkwKpI72lrhRzVZDHZjtU3R6fxCxayvJlAg+order+by+col357+asc&amp;viz=GVIZ&amp;t=SCATTER&amp;rmax=250&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe>
+
+	<h3>Network graph of the link between SecSenALL and RSA weighted by SeBIS clusters as expected:</h3>
+	<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;viz=GVIZ&amp;t=GRAPH&amp;gc=true&amp;gd=true&amp;sdb=1&amp;rmax=100000&amp;q=select+col364%2C+col383%2C+col357+from+1WslGJjkwKpI72lrhRzVZDHZjtU3R6fxCxayvJlAg&amp;qrs=+where+col364+%3E%3D+&amp;qre=+and+col364+%3C%3D+&amp;qe=&amp;uiversion=2&amp;state=%7B%22ps%22%3A%221_1_2e_a_14_1a_18_9_3h_-8_v_1s_-1e_13_3f_c_g_1m_8_4_1s_t_0_32_-6_c_33_t_b_2s_16_16_1m_-u_r_1p_-8_m_1a_-c_q_21_-s_15_g_-1_17_3s_l_p_22_-d_i_25_18_e_2d_-o_f_1e_n_a_2m_-h_6_33_-j_s_2x_-s_k_16_p_t_2g_1c_2_2m_-v_n_18_b_d_1a_1_5_13_-n_8_3i_-q_u_1r_j_j_3i_-18_w_41_4_h_x_5_l_10_g_12_-6_-1h_z_10_-1g_18_1k_25_11_4_1r_x_d_-p_3_3d_1o_10_y_2c_7_p_-11_1c_-1h_-4_1a_4p_-2m_y_4q_-26_1b_5n_-t_19_-n_x_1d_5d_-5x_o_3k_-2o_%22%2C%22cx%22%3A134.94747448536006%2C%22cy%22%3A12.923528342470105%2C%22sw%22%3A2015.2686826674653%2C%22sh%22%3A1110.6726471540478%2C%22z%22%3A0.7464924824744459%7D&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe>
       </div>
 
       <div class="page-header">
 	<h2>Is the data correct?</h2>
-	<p>What aspects of this data can you verify? How did you do so? What did
-	you find?</p>
+	<p>I removed the personally identifiable information before uploading the dataset, but beforehand, I checked for instance that the completion codes recorded in the CSV file matched the completion codes reported on Mechanical Turk. I also looked at patterns of data to see if there were any noticeabe patterns such as a respondent only answering "4, 4, 4, 4," across a row or "1, 2, 3, 4, 1, 2, 3, 4" to indicate a lack of honest answers, there were none.</p>
       </div>
 
     </div> <!-- /container -->
